@@ -2,13 +2,13 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
 test:
-	python -m pytest search_engine_comparison.py
+	python -m pytest .
 
 format:
 	black search_engine_comparison.py
 
 lint:
-	pylint -m search_engine_comparison.py
+	pylint .
 
 refactor: format lint test
 

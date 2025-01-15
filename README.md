@@ -1,9 +1,11 @@
 # pyproject-template
 
+[![Makefile CI](https://github.com/obar1/onepage_job_lister/actions/workflows/makefile.yml/badge.svg)](https://github.com/obar1/onepage_job_lister/actions/workflows/makefile.yml) 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/obar1/onepage_job_lister?quickstart=1)
+
 > (very) simple job website lister (in one page)
 > I know very little about web - `feel free to add more to this repo`
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/obar1/0to100?quickstart=1)
 
 ![alt text](30d61c00-070a-4399-912d-eb295a14342e.png)
 just open this repo in your GitHub Codespace and run the demo as:

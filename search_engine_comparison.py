@@ -15,7 +15,7 @@ IFRAME_X, IFRAME_Y = 1200, 500
 def main():
     """main"""
     # pylint: disable=C0201,C0206
-    st.set_page_config(layout="wide",page_title="obar1 1P Job lister")
+    st.set_page_config(layout="wide", page_title="obar1 1P Job lister")
     st.title("Search Engine Comparison")
     st.header("Enter your search query:")
     input_txt = st.text_input("search term:", DEF_SEARCH_TERMS)
