@@ -3,11 +3,8 @@
 
 function setup {
     # set -x
-    export MAP_YAML_PATH=map.yaml
 
-    pip install .
-
-    chmod +x main.py
+    pip install -r ./requirements.txt
 }
-
-streamlit run search_engine_comparison.py
+setup
+python -m streamlit run search_engine_comparison.py

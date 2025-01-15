@@ -85,9 +85,12 @@ def get_container(input_text: str, jl_id: str, template: Template):
     src = template.safe_substitute(input_text=input_text)
 
     with st.container():
-        st.write(jl_id)
-        st.link_button(label=src, url=src)
-        components.iframe(src, width=IFRAME_X, height=IFRAME_Y, scrolling=True)
+        col1, col2 = st.columns([0.3, 0.7],gap="small", vertical_alignment="top", border=False)
+        with col1:
+            st.write(jl_id)
+            st.link_button(label=src, url=src)
+        with col2:
+            components.iframe(src, width=IFRAME_X, height=IFRAME_Y, scrolling=True)
         st.divider()
 
 
