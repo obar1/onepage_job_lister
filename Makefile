@@ -5,7 +5,7 @@ test:
 	python -m pytest .
 
 format:
-	black search_engine_comparison.py
+	black .
 
 lint:
 	pylint .
