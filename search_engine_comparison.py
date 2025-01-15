@@ -72,15 +72,11 @@ def get_engines() -> dict:
         },
         "pracuj": {
             "id": "pracuj",
-            "template": Template(
-                "https://www.pracuj.pl/praca/$input_text"
-            ),
+            "template": Template("https://www.pracuj.pl/praca/$input_text"),
         },
         "nofluffjobs": {
             "id": "nofluffjobs",
-            "template": Template(
-                "https://nofluffjobs.com/pl//$input_text"
-            ),
+            "template": Template("https://nofluffjobs.com/pl//$input_text"),
         },
         # // add more here
         # https://snaphunt.com/resources/sourcing-and-assessing-talent/top-job-posting-sites-in-poland
@@ -98,12 +94,19 @@ def get_container(input_text: str, jl_id: str, template: Template):
     src = template.safe_substitute(input_text=input_text)
 
     with st.container():
-        col1, col2 = st.columns([0.3, 0.7],gap="small", vertical_alignment="top", border=False)
+        col1, col2 = st.columns(
+            [0.3, 0.7], gap="small", vertical_alignment="top", border=False
+        )
         with col1:
             st.write(jl_id)
             st.link_button(label=src, url=src)
         with col2:
-            components.iframe(src, width=IFRAME_X, height=IFRAME_Y, scrolling=True, )
+            components.iframe(
+                src,
+                width=IFRAME_X,
+                height=IFRAME_Y,
+                scrolling=True,
+            )
         st.divider()
 
 
