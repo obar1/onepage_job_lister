@@ -1,0 +1,19 @@
+pylint==2.16.2
+pytest==7.2.1
+pytest-cov==4.0.0
+black==23.1.0
+ipython==8.10.0
+pyyaml==6.0.1
+mypy==1.10.0
+
+## notebook
+nbval==0.10.0
+pandas==1.5.3
+seaborn==0.12.2
+plotly==5.13.0
+jupyter==1.0.0
+
+# api
+fastapi==0.92.0
+uvicorn==0.20.0
+httpx==0.23.3
