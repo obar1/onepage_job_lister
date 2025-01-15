@@ -103,7 +103,7 @@ def get_container(input_text: str, jl_id: str, template: Template):
             st.write(jl_id)
             st.link_button(label=src, url=src)
         with col2:
-            components.iframe(src, width=IFRAME_X, height=IFRAME_Y, scrolling=True)
+            components.iframe(src, width=IFRAME_X, height=IFRAME_Y, scrolling=True, )
         st.divider()
 
 
