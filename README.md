@@ -1,23 +1,43 @@
 # pyproject-template
 
-[![Makefile CI](https://github.com/obar1/pyproject-template/actions/workflows/makefile.yml/badge.svg)](https://github.com/obar1/pyproject-template/actions/workflows/makefile.yml)
+> (very) simple job website lister (in one page)
+> I know very little about web - `feel free to add more to this repo`
 
-simple pyproject template with some factories
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/obar1/0to100?quickstart=1)
 
-> check
-```
-$ ls -1 *.*p*
+just open this repo in your GitHub Codespace and run the demo as:
 
-demo_api_from_notebook.ipynb
-demo_from_cli.py
-run_api.py
+## usage 
 
-```
-## init
-
-use make
-ex
 ```bash
-pip install -m venv .venv
-make install
+bash demo.sh
+``` 
+
+tune contents of 
 ```
+def get_engines() -> dict:
+```
+
+## debug
+> vs code 
+use [here](.vscode/launch.json)
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python:Streamlit",
+            "type": "debugpy",
+            "request": "launch", 
+            "module": "streamlit",
+            "args": ["run", "${file}"]
+        }
+    ]
+}
+
+```
+and use it as
+![alt text](8428dd40-2c0a-4b47-9aa7-6ab3707ddc8d.png)
+
+with braskpoints where needed :)
+![alt text](8b734a43-685a-40c3-9801-947cb48b065f.png)

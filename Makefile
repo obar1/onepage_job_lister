@@ -2,16 +2,13 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
 test:
-	python -m pytest lib/tests/test_*.py
-	python -m pytest -vv --nbval-lax *.ipynb
+	python -m pytest search_engine_comparison.py
 
 format:
-	black lib
+	black search_engine_comparison.py
 
 lint:
-	pylint --disable=R,C,W0702,W0621,W1203 lib
+	pylint search_engine_comparison.py
 
 refactor: format lint test
 
-jupyter9:
-	jupyter notebook
