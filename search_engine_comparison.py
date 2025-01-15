@@ -70,7 +70,20 @@ def get_engines() -> dict:
                 "https://rocketjobs.pl/oferty-pracy/wszystkie-lokalizacje?keyword=$input_text&from=0"
             ),
         },
+        "pracuj": {
+            "id": "pracuj",
+            "template": Template(
+                "https://www.pracuj.pl/praca/$input_text"
+            ),
+        },
+        "nofluffjobs": {
+            "id": "nofluffjobs",
+            "template": Template(
+                "https://nofluffjobs.com/pl//$input_text"
+            ),
+        },
         # // add more here
+        # https://snaphunt.com/resources/sourcing-and-assessing-talent/top-job-posting-sites-in-poland
     }
 
 
