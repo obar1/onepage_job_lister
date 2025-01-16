@@ -6,6 +6,9 @@
 > (very) simple job website lister (in one page)
 > I know very little about web - `feel free to add more to this repo`
 
+https://onepagejoblister-obar1.streamlit.app/
+
+or `locally`
 
 ![alt text](30d61c00-070a-4399-912d-eb295a14342e.png)
 just open this repo in your GitHub Codespace and run the demo as:
