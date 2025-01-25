@@ -5,6 +5,8 @@ v0.1 - basic version
 
 from string import Template
 import yaml
+import os
+import time
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -75,4 +77,8 @@ def get_container(input_text: str, jl_id: str, template: Template):
 
 
 if __name__ == "__main__":
+    is_build = os.getenv("is_build")
+    if not is_build:
+        time.sleep(1)
+        st.stop()
     main()
