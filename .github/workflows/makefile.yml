@@ -22,9 +22,6 @@ jobs:
     - name: format
       run: make format
 
-    - name: demo
-      run: make demo
-
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
