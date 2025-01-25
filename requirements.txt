@@ -5,3 +5,4 @@ mypy
 
 ## web
 streamlit>=1.17.0
+PyYAML
