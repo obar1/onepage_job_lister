@@ -9,7 +9,7 @@ import yaml
 import streamlit as st
 import streamlit.components.v1 as components
 
-DEF_SEARCH_TERMS = "data"
+DEF_SEARCH_TERMS = "data engineer"
 IFRAME_X, IFRAME_Y = 1200, 500
 
 
