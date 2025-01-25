@@ -1,0 +1,11 @@
+justjoin:
+  id: justjoin
+  template: https://justjoin.it/job-offers/all-locations?keyword=$input_text&from=0
+
+inhire:
+  id: inhire *
+  template: https://inhire.io/?roles=big_data
+
+solid jobs:
+  id: solid jobs
+  template: https://solid.jobs/offers/it;searchTerm=$input_text
