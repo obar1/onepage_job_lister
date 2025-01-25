@@ -9,3 +9,7 @@ inhire:
 solid jobs:
   id: solid jobs
   template: https://solid.jobs/offers/it;searchTerm=$input_text
+
+jobble:
+  id: jobble
+  template: https://pl.jooble.org/SearchResult?rgns=Gda%C5%84sk&ukw=$input_text

@@ -38,7 +38,7 @@ def get_engines() -> dict:
     Returns:
         dict: id and template are mandatory
     """
-    with open("engines.yaml", "r", encoding="utf-8") as file:
+    with open("engines.yaml", "r") as file:
         engines = yaml.safe_load(file)
 
     for engine in engines.values():
