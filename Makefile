@@ -12,3 +12,5 @@ lint:
 
 refactor: format lint test
 
+demo:
+	bash demo.sh
