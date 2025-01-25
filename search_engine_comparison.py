@@ -4,6 +4,7 @@ v0.1 - basic version
 """
 
 from string import Template
+import yaml
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -37,50 +38,13 @@ def get_engines() -> dict:
     Returns:
         dict: id and template are mandatory
     """
-    # pylint: disable=C0301
+    with open("engines.yaml", "r", encoding="utf-8") as file:
+        engines = yaml.safe_load(file)
 
-    return {
-        "justjoin": {
-            "id": "justjoin",
-            "template": Template(
-                "https://justjoin.it/job-offers/all-locations?keyword=$input_text&from=0"
-            ),
-        },
-        "inhire": {
-            "id": "inhire *",
-            "template": Template("https://inhire.io/?roles=big_data"),
-        },
-        "solid jobs": {
-            "id": "solid jobs",
-            "template": Template("https://solid.jobs/offers/it;searchTerm=$input_text"),
-        },
-        "indeed": {
-            "id": "indeed",
-            "template": Template("https://pl.indeed.com/jobs?q=$input_text"),
-        },
-        "theprotocol": {
-            "id": "theprotocol",
-            "template": Template(
-                "https://theprotocol.it/filtry/gdansk;wp?kw=$input_text"
-            ),
-        },
-        "rocketjobs": {
-            "id": "rocketjobs",
-            "template": Template(
-                "https://rocketjobs.pl/oferty-pracy/wszystkie-lokalizacje?keyword=$input_text&from=0"
-            ),
-        },
-        "pracuj": {
-            "id": "pracuj",
-            "template": Template("https://www.pracuj.pl/praca/$input_text"),
-        },
-        "nofluffjobs": {
-            "id": "nofluffjobs",
-            "template": Template("https://nofluffjobs.com/pl//$input_text"),
-        },
-        # // add more here
-        # https://snaphunt.com/resources/sourcing-and-assessing-talent/top-job-posting-sites-in-poland
-    }
+    for engine in engines.values():
+        engine["template"] = Template(engine["template"])
+
+    return engines
 
 
 def get_container(input_text: str, jl_id: str, template: Template):
